@@ -14,6 +14,11 @@ html, body{
     color: white;
 }
 
+body{
+    background: url(../style/img/bgc.svg);
+
+}
+
 main{
     flex: auto;
 }
@@ -36,4 +41,21 @@ nav{
 
 #menu, .nav_contact{
     display: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#menu:checked~ .nav_contact{
+    display: flex;
+}
+.nav_contact
+{
+    flex-direction: column;
+    color: #ffffff;
+    height: 100vh;
+    width: 420px;
+
 }
