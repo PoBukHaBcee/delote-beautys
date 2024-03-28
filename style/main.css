@@ -1,61 +1,190 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color:white;
 }
 
-html, body{
+/* подключаем шрифты */
+@font-face{
+    font-family: "Cormorant Garamond";
+    src: url(../style/font/Cormorant_Garamond/CormorantGaramond-Regular.ttf);
+
+    font-family: "Garamond";
+    src: url(../style/font/Eb_Garamond/static/EBGaramond-Regular.ttf);
+}
+
+
+html,body {
     width: 100%;
-    height: 100%;
+    height: 5000px;
+    background-color: #111111;
     display: flex;
     flex-direction: column;
-    background-color: #111111;
-    color: white;
 }
 
-body{
+body {
     background: url(../style/img/bgc.svg);
-
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #00000080;
+    background-blend-mode: color;
 }
 
-main{
+main {
     flex: auto;
 }
 
-header{
-    border-bottom: solid 1px #f1f1f1;
+header {
     width: 1280px;
     margin: 30px auto;
+    border-bottom: solid 1px white;
 }
-nav{
-    gap: 80%;
+
+nav {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.logo{
-    margin: 0 40px;
-}
-
-#menu, .nav_contact{
-    display: none;
+    gap: 80px;
 }
 
 nav a {
     text-decoration: none;
-    color: #ffffff;
+    color: #FFFFFF;
+    border-bottom: solid 1px #cdaa7d00;
 }
 
-#menu:checked~ .nav_contact{
+nav label {
+    cursor: pointer;
+    color: white;
+}
+
+nav label:hover {
+    color: #CDAA7D;
+}
+
+nav a:hover {
+    color: #CDAA7D;
+    border-bottom: solid 1px #CDAA7D;
+}
+
+.logo {
+    margin: 0 40px;
+}
+
+.instagram, .logo {
+    border: none !important;
+}
+
+.inst:hover path {
+    stroke: #CDAA7D;
+}
+
+.logo:hover path {
+    fill: #CDAA7D;
+}
+
+#menu, .nav_contact {
+    display: none;
+}
+
+#menu:checked ~ .nav_contact {
+    transform: translate(0, 0);
+}
+
+.nav_contact {
+    transform: translate(475px, 0);
+    transition: all .1s linear;
     display: flex;
-}
-.nav_contact
-{
     flex-direction: column;
-    color: #ffffff;
+    color: #FFFFFF;
     height: 100vh;
-    width: 420px;
+    width: 475px;
+    background-color: #111111;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    gap: 60px;
+    padding: 0 80px;
+    border-left: 1px solid #FFFFFF;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+}   
+
+.nav_contact label {
+    position: absolute;
+    top: 42px;
+    left: 82px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.nav_contact label:hover {
+    color: #CDAA7D;
+}
+
+.nav_contact ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nav_contact ul li:first-child {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.first_screen
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 102px;
+}
+
+.first_screen h1{
+    color: white;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 86px;
+    margin-top: 150px;
+}
+
+.scroll
+{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    bottom: 100px;
+}
+
+.scroll::before{
+    content: url(../style/img/mouse.svg);
+}
+
+.lorem_gid h1{
+    font-weight: 700;
+    font-size: 200px;
+    position: absolute;
+    padding-bottom: 170px;
 
 }
+
+.lorem_gid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 856px;
+    height:385px;
+}
+
+/* main .lorem_gid{} */
